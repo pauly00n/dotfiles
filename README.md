@@ -1,9 +1,9 @@
 # dotfiles
 stanford setup - neovim w/ IDE & LaTeX functionality
 
-![Coding_setup](./images/Coding)
-![Neovim_Latex](./images/Light)
-![Neovim_Latex_Dark](./images/Dark)
+![Coding_setup](./images/Coding.png)
+![Neovim_Latex](./images/Light.png)
+![Neovim_Latex_Dark](./images/Dark.png)
 
 Macbook Air M2 
 - Apple Default Terminal (battery life better than iTerm2)
