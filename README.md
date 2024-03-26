@@ -12,6 +12,6 @@ Macbook Air M2
 - Neotree file tree
 - Zathura PDF Viewer
 
-Latex Template from (https://github.com/SeniorMars/latex_template)https://github.com/SeniorMars/latex_template
+Latex Template from https://github.com/SeniorMars/latex_template
 
-UltiSnips shortcuts from (https://castel.dev/post/lecture-notes-1/)https://castel.dev/post/lecture-notes-1/
+UltiSnips shortcuts from https://castel.dev/post/lecture-notes-1/
