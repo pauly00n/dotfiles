@@ -13,3 +13,4 @@ Macbook Air M2
 - Zathura PDF Viewer
 
 Latex Template from [github.com/](https://github.com/SeniorMars/latex_template)https://github.com/SeniorMars/latex_template
+UltiSnips shortcuts from [https://castel.dev/post/lecture-notes-1/](https://castel.dev/post/lecture-notes-1/)https://castel.dev/post/lecture-notes-1/
