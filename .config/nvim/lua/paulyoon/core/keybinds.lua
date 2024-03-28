@@ -1,7 +1,9 @@
+-- shorthand notation for the vim remap variables  
 local function map(m, k, v)
 	vim.keymap.set(m, k, v, { silent = true })
 end
 
+-- sets mapleader key
 vim.g.mapleader = " "
 
 -- map to easily access init.lua file
