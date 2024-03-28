@@ -15,3 +15,5 @@ Macbook Air M2
 Latex Template from https://github.com/SeniorMars/latex_template
 
 UltiSnips shortcuts from https://castel.dev/post/lecture-notes-1/
+
+Lua config & organization from https://github.com/numToStr/dotfiles/tree/master/neovim/.config/nvim/lua
