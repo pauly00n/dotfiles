@@ -28,6 +28,7 @@ return {
       capabilities = default,
     })
 
+    -- configure clangd server
     lspconfig["clangd"].setup({
       capabilities = default,
       filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "hpp" }
