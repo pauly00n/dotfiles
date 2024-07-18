@@ -1,0 +1,6 @@
+*.DS_Store
+.config/raycast/
+.config/linearmouse/
+.config/coc/
+.config/configstore/
+.config/QtProject/
