@@ -98,6 +98,8 @@ return {
     }
     -- find more here: https://www.nerdfonts.com/cheat-sheet
 
+    vim.cmd "highlight! BorderBG guibg=NONE"
+
     cmp.setup({
       completion = {
         completeopt = "menu,noselect",
@@ -197,7 +199,9 @@ return {
         entries = 'custom',
       },
       window = {
-        completion = cmp.config.window.bordered(),
+        completion = cmp.config.window.bordered({
+            winhighlight = "Normal:Normal,Floatborder:BorderBG,CursorLine:PmenuSel,Search:None"
+          }),
         documentation = cmp.config.window.bordered(),
         -- completion = {
         --   border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },

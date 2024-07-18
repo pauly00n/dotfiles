@@ -1,0 +1,24 @@
+[env]
+TERM = "xterm-256color"
+
+[window]
+dimensions = {columns = 145, lines = 50}
+position = { x = 240, y = 160 }
+padding.x = 10
+padding.y = 10
+
+decorations = "Buttonless"
+
+opacity = 0.7
+blur = true
+
+option_as_alt = "Both"
+
+[font]
+normal.family = "MesloLGS Nerd Font"
+normal.style = "Regular"
+bold.family = "MesloLGS Nerd Font"
+bold.style = "Bold"
+
+size = 13
+offset = {x = 1, y = 1}

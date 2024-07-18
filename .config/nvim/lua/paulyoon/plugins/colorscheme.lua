@@ -1,8 +1,13 @@
 return {
-    "tomasiser/vim-code-dark",
+    "Mofiqul/vscode.nvim",
     priority = 1000,
     config = function()
-        vim.cmd("colorscheme codedark")
-        vim.cmd("let loaded_matchparen = 1")
+        vim.o.background = 'dark'
+        require('vscode').setup({
+            -- If using alacritty, turn transparency on. Otherwise don't
+            transparent = true,
+            underline_links = true;
+        })
+        vim.cmd("colorscheme vscode")
     end,
 }
