@@ -1,7 +1,7 @@
 # dotfiles
 stanford setup - neovim w/ IDE functionality (LSP, filetree, terminal, snippets for LaTeX, Jupyter Notebook support)
 
-![Jupyter Notebook](./images/ipynb.png)
+![Jupyter Notebook](./images/Jupyter+Terminal.png)
 ![Neovim_Latex_Dark](./images/LaTeX.png)
 
 Macbook Air M2 - 1TB SSD, 16GB RAM
