@@ -1,12 +1,11 @@
 # dotfiles
-stanford setup - neovim w/ IDE functionality (LSP, filetree, terminal, snippets for LaTeX, jupyter Notebook support)
+stanford setup - neovim w/ IDE functionality (LSP, filetree, terminal, snippets for LaTeX, Jupyter Notebook support)
 
-![Coding_setup](./images/Codingg.png)
-![Neovim_Latex](./images/Lightt.png)
-![Neovim_Latex_Dark](./images/Darkk.png)
+![Jupyter Notebook](./images/ipynb.png)
+![Neovim_Latex_Dark](./images/LaTeX.png)
 
-Macbook Air M2 
-- iTerm2/Alacritty
+Macbook Air M2 - 1TB SSD, 16GB RAM
+- Alacritty
 - Powerlevel10k zsh theme w/ MesloLGS Nerd Font
 - VScode.nvim theme
 - Neotree file tree
@@ -17,3 +16,5 @@ Latex Template from https://github.com/SeniorMars/latex_template
 UltiSnips shortcuts from https://castel.dev/post/lecture-notes-1/
 
 Lua config & organization from https://github.com/numToStr/dotfiles/tree/master/neovim/.config/nvim/lua
+
+Jupyter Notebook setup from https://github.com/benlubas/molten-nvim/blob/main/docs/Notebook-Setup.md
