@@ -16,7 +16,7 @@ map('n', '<leader>n', ":Neotree<CR>")
 map('n', '<leader>m', ':MaximizerToggle!<CR>')
 
 -- map(s) for neoterm
-map('n', '<c-q>', ':Ttoggle<CR>')
+map('n', '<leader>tm', ':Ttoggle<CR>')
 map('i', '<c-q>', '<Esc>:Ttoggle<CR>')
 map('t', '<c-q>', '<C-d>')
 
