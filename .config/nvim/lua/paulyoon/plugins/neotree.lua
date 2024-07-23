@@ -11,5 +11,11 @@ return {
       vim.cmd [[
       highlight NeoTreeDotFile guifg = #aaaaaa guibg = NONE
       ]]
+      vim.cmd [[
+      highlight NeoTreeStats guifg = #aaaaaa guibg = NONE
+      ]]
+      vim.cmd [[
+      highlight NeoTreeDimText guifg = #aaaaaa guibg = NONE
+      ]]
     end
 }
