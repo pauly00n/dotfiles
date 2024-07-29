@@ -10,11 +10,21 @@ o.clipboard = 'unnamedplus'
 -- line numbers/relative line numbers hybrid
 o.number = true
 
-
 g['vimtex_matchparen_loaded'] = 1
 
 -- cursor line which is rly cool
 o.cursorline = true
+
+-- auto set tabpage fill highlight group
+local function set_highlight()
+  vim.cmd('highlight BufferTabpageFill guibg=NONE')
+end
+
+-- Create an auto command that runs when Neovim launches
+vim.api.nvim_create_autocmd('VimEnter', {
+  pattern = '*',
+  callback = set_highlight,
+})
 
 -- hide unused buffers 
 o.hidden = true
