@@ -1,9 +1,9 @@
 # dotfiles
 stanford setup - neovim w/ IDE functionality (LSP, filetree, terminal, snippets for LaTeX, Jupyter Notebook support, Leetcode integration)
 
-![Leetcode](./images/leetcode.png)
+![Leetcode](./images/elitecode.png)
 ![Neovim_Latex_Dark](./images/LaTeX.png)
-![Jupyter Notebook](./images/Jupyter+Terminal.png)
+![Jupyter Notebook](./images/jupyter.png)
 
 **Macbook Air M2 - 1TB SSD, 16GB RAM**
 - Alacritty Terminal, transparent background
