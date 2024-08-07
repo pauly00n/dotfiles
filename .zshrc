@@ -120,3 +120,5 @@ source $ZSH/oh-my-zsh.sh
 
 # Added by Amplify CLI binary installer
 export PATH="$HOME/.amplify/bin:$PATH"
+
+export BAT_THEME="Visual Studio Dark+"

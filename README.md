@@ -1,8 +1,9 @@
 # dotfiles
-stanford setup - neovim w/ IDE functionality (LSP, filetree, terminal, snippets for LaTeX, Jupyter Notebook support)
+stanford setup - neovim w/ IDE functionality (LSP, filetree, terminal, snippets for LaTeX, Jupyter Notebook support, Leetcode integration)
 
-![Jupyter Notebook](./images/Jupyter+Terminal.png)
+![Leetcode](./images/leetcode.png)
 ![Neovim_Latex_Dark](./images/LaTeX.png)
+![Jupyter Notebook](./images/Jupyter+Terminal.png)
 
 **Macbook Air M2 - 1TB SSD, 16GB RAM**
 - Alacritty Terminal, transparent background
@@ -14,7 +15,7 @@ stanford setup - neovim w/ IDE functionality (LSP, filetree, terminal, snippets 
 - VimTeX plugin for LaTeX support
 - Zathura PDF Viewer
 
-**Warning:** Zathura is a headache to set up. If you want to get started, I would follow part 6 here: https://ejmastnak.com/tutorials/vim-latex/intro/
+**Zathura:** Zathura is a headache. If you want to use it, I would follow part 6 here: https://ejmastnak.com/tutorials/vim-latex/intro/
 
 Latex Template from https://github.com/SeniorMars/latex_template
 

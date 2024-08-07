@@ -84,7 +84,7 @@ map2('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
 -- Pin/unpin buffer
 map2('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
 -- Close buffer
-map2('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
+map2('n', '<A-w>', '<Cmd>BufferClose<CR>', opts)
 -- Wipeout buffer
 --                 :BufferWipeout
 -- Close commands
