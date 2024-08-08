@@ -1,6 +1,6 @@
 return {
   "williamboman/mason.nvim",
-  ft ={ "py", "html", "js", "ts", "lua", "jsx", "tsx" },
+  ft ={ "py", "html", "js", "ts", "lua", "jsx", "tsx", "md", "css"},
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -30,14 +30,15 @@ return {
     mason_lspconfig.setup({
       -- list of servers for mason to install
       ensure_installed = {
-        -- "html",
-        -- "emmet_ls",
+        "html",
+        "emmet_ls",
         "texlab",
         "clangd",
         "pyright",
         "tsserver",
+        "marksman",
         -- "lua_ls",   -- seems to cause trouble
-        -- "cssls",
+        "cssls",
         -- "tailwindcss",
         -- "svelte"
         -- "graphql",

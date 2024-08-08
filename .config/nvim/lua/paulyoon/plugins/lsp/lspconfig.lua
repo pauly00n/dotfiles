@@ -23,22 +23,29 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
-    -- configure html server
+    -- configure html lsp 
     lspconfig["html"].setup({
       capabilities = default,
     })
 
-    -- configure clangd server
+    -- configure .md lsp
+    lspconfig["marksman"].setup({
+      capabilities = default,
+    })
+
+    -- configure clangd lsp
     lspconfig["clangd"].setup({
       capabilities = default,
       filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "hpp" },
 
     })
-    -- configure texlab server
-    -- lspconfig["texlab"].setup({
-      -- capabilities = default,
-      --filetypes = { "tex" }
-    --})
+
+    -- configure texlab lsp 
+    lspconfig["texlab"].setup({
+      capabilities = default,
+      filetypes = { "tex" }
+    })
+
     -- configure typescript server with plugin
     lspconfig["tsserver"].setup({
       capabilities = default,
