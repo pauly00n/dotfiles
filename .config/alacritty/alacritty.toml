@@ -2,8 +2,8 @@
 TERM = "xterm-256color"
 
 [window]
-dimensions = {columns = 150, lines = 48}
-position = { x = 245, y = 160 }
+dimensions = {columns = 150, lines = 45}
+position = { x = 170, y = 150 }
 padding.x = 15
 padding.y = 15
 
@@ -20,5 +20,5 @@ normal.style = "Regular"
 bold.family = "MesloLGS Nerd Font"
 bold.style = "Bold"
 
-size = 13
+size = 14
 offset = {x = 1, y = 1}

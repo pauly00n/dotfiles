@@ -16,9 +16,9 @@ map('n', '<leader>n', ":Neotree<CR>")
 map('n', '<leader>m', ':MaximizerToggle!<CR>')
 
 -- map(s) for neoterm
-map('n', '<leader>tm', ':Ttoggle<CR>')
-map('i', '<c-q>', '<Esc>:Ttoggle<CR>')
-map('t', '<c-q>', '<C-d>')
+map('n', '<leader>tm', ':Topen [resize=40]<CR>')
+map('i', '<A-q>', '<Esc>:Ttoggle<CR>')
+map('t', '<A-q>', '<C-d>')
 
 -- map(s) for telescope
 map('n', '<leader>ff', ':Telescope find_files<CR>')
