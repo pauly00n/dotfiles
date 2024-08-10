@@ -37,8 +37,8 @@ return {
         "pyright",
         "tsserver",
         "marksman",
-        -- "lua_ls",   -- seems to cause trouble
         "cssls",
+        -- "lua_ls",   -- seems to cause trouble
         -- "tailwindcss",
         -- "svelte"
         -- "graphql",

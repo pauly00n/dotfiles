@@ -26,11 +26,19 @@ return {
     -- configure html lsp 
     lspconfig["html"].setup({
       capabilities = default,
+      filetypes = { "html" }
+    })
+
+    -- configure css lsp
+    lspconfig["cssls"].setup({
+      capabilities = default,
+      filetypes = { "css" }
     })
 
     -- configure .md lsp
     lspconfig["marksman"].setup({
       capabilities = default,
+      filetypes = { "md" },
     })
 
     -- configure clangd lsp
