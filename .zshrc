@@ -87,7 +87,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search z)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,5 +117,8 @@ export BAT_THEME="Visual Studio Dark+"
 
 # Personal Aliases
 alias vim="nvim"
-alias cd="z ~"
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias neo="neofetch --config ~/.dotfiles/.config/neofetch/config2.conf --ascii ~/.dotfiles/.config/neofetch/ascii"
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
+eval "$(zoxide init zsh)"
+alias cd="z ~"
