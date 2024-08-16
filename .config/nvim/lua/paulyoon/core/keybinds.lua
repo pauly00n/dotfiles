@@ -1,6 +1,6 @@
--- shorthand for the vim remap variables  
+-- shorthand for the vim remap variables
 local function map(m, k, v)
-	vim.keymap.set(m, k, v, { silent = true })
+  vim.keymap.set(m, k, v, { silent = true })
 end
 
 -- sets mapleader key
@@ -12,7 +12,7 @@ map('n', '<leader>v', ":exe 'edit' stdpath('config').'/init.lua'<CR>")
 -- map to easily access neotree which is the best
 map('n', '<leader>n', ":Neotree<CR>")
 
--- map for maximizer 
+-- map for maximizer
 map('n', '<leader>m', ':MaximizerToggle!<CR>')
 
 -- map(s) for neoterm
@@ -29,6 +29,13 @@ map('n', '<leader>fh', ':Telescope help_tags<CR>')
 -- lets me switch windows easier
 map('n', '<leader>h', '<C-w>h')
 map('n', '<leader>l', '<C-w>l')
+
+-- obsidian keybinds
+map("n", "<leader>oo", ":cd /Users/paulyoon/library/Mobile\\ Documents/com~apple~CloudDocs/obsidian/Paul's\\ Vault<cr>")
+map("n", "<leader>on", ":ObsidianTemplate note<cr> :lua vim.cmd([[1,/^\\S/s/^\\n\\{1,}//]])<cr>")
+map("n", "<leader>of", ":s/\\(# \\)[^_]*_/\\1/ | s/-/ /g<cr>")
+map("n", "<leader>os", ":Telescope find_files search_dirs={\"/Users/paulyoon/library/Mobile\\ Documents/com~apple~CloudDocs/obsidian/Paul's\\ Vault\"}<cr>")
+map("n", "<leader>og", ":Telescope live_grep search_dirs={\"/Users/paulyoon/library/Mobile\\ Documents/com~apple~CloudDocs/obsidian/Paul's\\ Vault\"}<cr>")
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer

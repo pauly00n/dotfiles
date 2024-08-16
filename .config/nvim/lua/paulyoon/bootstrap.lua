@@ -14,7 +14,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- lazy configuration: imports from plugins and lsp folders, the lua files inside them simply return values.
-require("paulyoon.core.cleanlines")
 
 require("lazy").setup({
     { import = "paulyoon.plugins" },
