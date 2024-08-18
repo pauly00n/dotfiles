@@ -87,7 +87,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -113,12 +113,16 @@ source $ZSH/oh-my-zsh.sh
 # Added by Amplify CLI binary installer
 export PATH="$HOME/.amplify/bin:$PATH"
 
+# added for bin
+export PATH="$HOME/bin:$PATH"
+
 export BAT_THEME="Visual Studio Dark+"
 
 # Personal Aliases
-alias vim="nvim"
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias neo="neofetch --config ~/.dotfiles/.config/neofetch/config2.conf --ascii ~/.dotfiles/.config/neofetch/ascii"
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 eval "$(zoxide init zsh)"
 alias cd="z ~"
+alias oo="z obsidian paulyoon"
+alias cn="z lua paulyoon"
+alias cz="z dotfiles; nvim .zshrc"

@@ -6,11 +6,11 @@ end
 -- sets mapleader key
 vim.g.mapleader = " "
 
--- map to easily access init.lua file
-map('n', '<leader>v', ":exe 'edit' stdpath('config').'/init.lua'<CR>")
+-- nohlsearch
+map('n', '<CR>', ":nohlsearch<CR> <CR>")
 
 -- map to easily access neotree which is the best
-map('n', '<leader>n', ":Neotree<CR>")
+map('n', '<leader>n', ":Neotree right<CR>")
 
 -- map for maximizer
 map('n', '<leader>m', ':MaximizerToggle!<CR>')
@@ -31,11 +31,14 @@ map('n', '<leader>h', '<C-w>h')
 map('n', '<leader>l', '<C-w>l')
 
 -- obsidian keybinds
-map("n", "<leader>oo", ":cd /Users/paulyoon/library/Mobile\\ Documents/com~apple~CloudDocs/obsidian/Paul's\\ Vault<cr>")
+map("n", "<leader>oo", ":cd /Users/paulyoon/Library/Mobile\\ Documents/com~apple~CloudDocs/obsidian/paulyoon<cr>")
 map("n", "<leader>on", ":ObsidianTemplate note<cr> :lua vim.cmd([[1,/^\\S/s/^\\n\\{1,}//]])<cr>")
 map("n", "<leader>of", ":s/\\(# \\)[^_]*_/\\1/ | s/-/ /g<cr>")
-map("n", "<leader>os", ":Telescope find_files search_dirs={\"/Users/paulyoon/library/Mobile\\ Documents/com~apple~CloudDocs/obsidian/Paul's\\ Vault\"}<cr>")
-map("n", "<leader>og", ":Telescope live_grep search_dirs={\"/Users/paulyoon/library/Mobile\\ Documents/com~apple~CloudDocs/obsidian/Paul's\\ Vault\"}<cr>")
+map("n", "<leader>os", ":Telescope find_files search_dirs={\"/Users/paulyoon/Library/Mobile\\ Documents/com~apple~CloudDocs/obsidian/paulyoon\"}<cr>")
+map("n", "<leader>og", ":Telescope live_grep search_dirs={\"/Users/paulyoon/Library/Mobile\\ Documents/com~apple~CloudDocs/obsidian/paulyoon\"}<cr>")
+map("n", "<leader>ok", ":!mv '%:p' /Users/paulyoon/Library/Mobile\\ Documents/com~apple~CloudDocs/obsidian/paulyoon/sort<cr>:bd<cr>")
+-- delete file in current buffer
+map("n", "<leader>od", ":!rm '%:p'<cr>:bd<cr>")
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
@@ -67,44 +70,3 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opts)
   end,
 })
-
-local map2 = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-
--- Move to previous/next
-map2('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
-map2('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
--- Re-order to previous/next
-map2('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
-map2('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
--- Goto buffer in position...
-map2('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', opts)
-map2('n', '<A-2>', '<Cmd>BufferGoto 2<CR>', opts)
-map2('n', '<A-3>', '<Cmd>BufferGoto 3<CR>', opts)
-map2('n', '<A-4>', '<Cmd>BufferGoto 4<CR>', opts)
-map2('n', '<A-5>', '<Cmd>BufferGoto 5<CR>', opts)
-map2('n', '<A-6>', '<Cmd>BufferGoto 6<CR>', opts)
-map2('n', '<A-7>', '<Cmd>BufferGoto 7<CR>', opts)
-map2('n', '<A-8>', '<Cmd>BufferGoto 8<CR>', opts)
-map2('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', opts)
-map2('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
--- Pin/unpin buffer
-map2('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
--- Close buffer
-map2('n', '<A-w>', '<Cmd>BufferClose<CR>', opts)
--- Wipeout buffer
---                 :BufferWipeout
--- Close commands
---                 :BufferCloseAllButCurrent
---                 :BufferCloseAllButPinned
---                 :BufferCloseAllButCurrentOrPinned
---                 :BufferCloseBuffersLeft
---                 :BufferCloseBuffersRight
--- Magic buffer-picking mode
-map2('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
--- Sort automatically by...
-map2('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
-map2('n', '<Space>bn', '<Cmd>BufferOrderByName<CR>', opts)
-map2('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
-map2('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
-map2('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
