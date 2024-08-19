@@ -82,6 +82,11 @@ return {
           },
         },
       },
+      pickers = {
+        find_files = {
+          hidden = true
+        },
+      },
       load_extension = {
         "fzf",
         "yank_history",
