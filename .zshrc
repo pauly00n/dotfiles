@@ -21,6 +21,9 @@ else
 fi
 export PATH=$BREWPATH:$PATH
 
+
+export DYLD_LIBRARY_PATH="$(brew --prefix)/lib:$DYLD_LIBRARY_PATH"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -122,9 +125,10 @@ export BAT_THEME="Visual Studio Dark+"
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias neo="neofetch --config ~/.dotfiles/.config/neofetch/config2.conf --ascii ~/.dotfiles/.config/neofetch/ascii"
 eval "$(zoxide init zsh)"
-alias cd="z ~"
-alias oo="z obsidian paulyoon"
+alias cd="z"
+alias oo="z documents paulyoon"
 alias cn="z lua paulyoon"
 alias cz="z dotfiles; nvim .zshrc"
 alias n="nvim"
 alias tsk="z paulyoon notes tasks; nvim tasks.md"
+alias obs="z documents paulyoon; nvim notes/home.md"

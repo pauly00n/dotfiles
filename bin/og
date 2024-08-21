@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Directory containing markdown files
-VAULT_DIR="/Users/paulyoon/Library/Mobile Documents/com~apple~CloudDocs/obsidian/paulyoon"
+VAULT_DIR="/Users/paulyoon/Library/Mobile Documents/iCloud~md~obsidian/documents/paulyoon"
 SOURCE_DIR="sort"
 DEST_DIR="notes"
 

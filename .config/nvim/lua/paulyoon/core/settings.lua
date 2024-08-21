@@ -9,6 +9,7 @@ o.clipboard = 'unnamedplus'
 
 -- line numbers/relative line numbers hybrid
 o.number = true
+o.relativenumber = true
 
 g['vimtex_matchparen_loaded'] = 1
 
