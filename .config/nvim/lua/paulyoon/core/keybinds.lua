@@ -10,7 +10,7 @@ vim.g.mapleader = " "
 map('n', '<CR>', ":nohlsearch<CR> <CR>")
 
 -- map to easily access neotree which is the best
-map('n', '<leader>n', ":Neotree right<CR>")
+map('n', '<leader>n', ":Neotree<CR>")
 map('n', '<leader>N', ":Neotree current<CR>")
 
 -- map for maximizer
