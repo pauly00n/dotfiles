@@ -49,12 +49,12 @@ return {
     })
 
     -- configure texlab lsp 
-    lspconfig["texlab"].setup({
-      capabilities = default,
-      filetypes = { "tex" }
-    })
+    --lspconfig["texlab"].setup({
+      --capabilities = default,
+      --filetypes = { "tex" }
+    --})
 
-    -- configure typescript server with plugin
+    -- configure typescript server
     lspconfig["tsserver"].setup({
       capabilities = default,
     })
