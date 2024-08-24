@@ -27,10 +27,10 @@ o.cursorline = true
 --  callback = set_highlight,
 -- })
 
--- hide unused buffers 
+-- hide unused buffers
 o.hidden = true
 
--- show title of file 
+-- show title of file
 o.title = true
 
 -- better searching options
@@ -69,20 +69,8 @@ g['doctest_verbose_string'] = "Succeeded"
 g['doctest_remove_pycache'] = 0
 g['doctest_traceback_info'] = 0
 
--- airline options
-g['airline_solorized_bg'] = 'dark'
-g['airline_powerline_fonts'] = 1
-g['airline#extension#tabline#enable'] = 1
-g['airline#extension#tabline#left_sep'] = ' '
-g['airline#extension#tabline#left_alt_sep'] = '|'
-g['airline#extension#tabline#formatter'] = 'unique_tail'
-
 -- disables those weird ~ things for end of buffer lines
-vim.opt.fillchars = {eob = " "}
+vim.opt.fillchars = { eob = " " }
 
 -- neoterm options
-g['neoterm_default_mod'] = 'vertical'
-g['neoterm_size'] = 60
-g['neoterm_autoinsert'] = 1
-
 vim.g.python3_host_prog = vim.fn.expand("~/path/to/venv/bin/python3")

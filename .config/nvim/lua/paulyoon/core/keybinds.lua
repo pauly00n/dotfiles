@@ -13,14 +13,6 @@ map('n', '<CR>', ":nohlsearch<CR> <CR>")
 map('n', '<leader>n', ":Neotree<CR>")
 map('n', '<leader>N', ":Neotree current<CR>")
 
--- map for maximizer
-map('n', '<leader>m', ':MaximizerToggle!<CR>')
-
--- map(s) for neoterm
-map('n', '<leader>tm', ':Topen [resize=40]<CR>')
-map('i', '<A-q>', '<Esc>:Ttoggle<CR>')
-map('t', '<A-q>', '<C-d>')
-
 -- map(s) for telescope
 map('n', '<leader>ff', "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>")
 map('n', '<leader>fg', ':Telescope live_grep<CR>')

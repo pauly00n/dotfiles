@@ -18,7 +18,7 @@ return {
         -- this will make it so the output shows up below the \`\`\` cell delimiter
         vim.g.molten_virt_lines_off_by_1 = true
 
-        vim.api.nvim_set_hl(0, "MoltenVirtualText", {fg = "#000000", bg = "#FFFFFF"})
+        vim.api.nvim_set_hl(0, "MoltenVirtualText", { fg = "#000000", bg = "#FFFFFF" })
 
         vim.keymap.set("n", "<space>mi", ":MoltenInit<CR>",
             { silent = true, desc = "Initialize the plugin" })
