@@ -72,5 +72,4 @@ g['doctest_traceback_info'] = 0
 -- disables those weird ~ things for end of buffer lines
 vim.opt.fillchars = { eob = " " }
 
--- neoterm options
 vim.g.python3_host_prog = vim.fn.expand("~/path/to/venv/bin/python3")
