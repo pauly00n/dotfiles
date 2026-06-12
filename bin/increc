@@ -1,0 +1,84 @@
+#!/usr/bin/env python3
+import re, pathlib
+
+root = pathlib.Path("/Users/paulyoon/Library/Mobile Documents/iCloud~md~obsidian/documents/paulyoon/")
+path = root / "home.md"
+
+txt = path.read_text(encoding="utf-8")
+
+# --- increment days since birth number ---
+m = re.search(r"(# the )([\d,]+)(st|nd|rd|th) eternal recurrence", txt)
+if not m:
+    raise SystemExit("Line not found")
+
+n = int(m.group(2).replace(",", "")) + 1
+
+def suffix(k: int) -> str: # correct suffix for end of letter
+    return "th" if 10 <= k % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(k % 10, "th")
+
+new = f"{m.group(1)}{n:,}{suffix(n)} eternal recurrence"
+out = re.sub(r"(# the )([\d,]+)(st|nd|rd|th) eternal recurrence", new, txt, count=1)
+
+# --- rotate table highlight in the header row ---
+HILITE_RE = re.compile(r"^==(.+)==$")
+
+def rotate_weekday_highlight(header_line: str) -> str:
+    """
+    Moves ==DAY== in the header row to the next day column.
+    Skips the first column ("Day/Time"). Preserves spacing + newline exactly.
+    """
+    nl = "\n" if header_line.endswith("\n") else ""
+    line = header_line[:-1] if nl else header_line  # strip newline temporarily
+
+    parts = line.split("|")
+    # Expect: ["", " Day/Time  ", " SUN ", ... , " SAT ", ""]
+    if len(parts) < 4:
+        return header_line
+
+    cells = parts[1:-1]  # includes Day/Time at index 0
+
+    # Find highlighted cell among day columns (skip index 0)
+    hi_idx = None
+    for i in range(1, len(cells)):
+        if HILITE_RE.match(cells[i].strip()):
+            hi_idx = i
+            break
+    if hi_idx is None:
+        return header_line
+
+    # Next day column (wrap)
+    next_idx = hi_idx + 1
+    if next_idx >= len(cells):
+        next_idx = 1
+
+    def unwrap(cell: str) -> str:
+        lead = re.match(r"^\s*", cell).group(0)
+        trail = re.search(r"\s*$", cell).group(0)
+        core = cell.strip()
+        m = HILITE_RE.match(core)
+        core = m.group(1) if m else core
+        return lead + core + trail
+
+    def wrap(cell: str) -> str:
+        lead = re.match(r"^\s*", cell).group(0)
+        trail = re.search(r"\s*$", cell).group(0)
+        core = cell.strip()
+        m = HILITE_RE.match(core)
+        core = m.group(1) if m else core
+        return lead + f"=={core}==" + trail
+
+    cells[hi_idx] = unwrap(cells[hi_idx])
+    cells[next_idx] = wrap(cells[next_idx])
+
+    parts[1:-1] = cells
+    return "|".join(parts) + nl
+
+
+lines = out.splitlines(True)  # keep line endings
+for idx, line in enumerate(lines):
+    if line.lstrip().startswith("| Day/Time"):
+        lines[idx] = rotate_weekday_highlight(line)
+        break
+
+out = "".join(lines)
+path.write_text(out, encoding="utf-8")
