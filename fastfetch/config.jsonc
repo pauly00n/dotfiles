@@ -1,0 +1,79 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "/Users/paulyoon/.config/fastfetch/logo.txt",
+    "type": "file",
+    "color": {
+      "1": "38;5;236",
+      "2": "38;5;241",
+      "3": "38;5;244",
+      "4": "38;5;247",
+      "5": "38;5;250"
+    },
+    "padding": {
+      "top": 1,
+      "left": 2,
+      "right": 5
+    }
+  },
+  "display": {
+    "separator": " ➜ ",
+    "color": {
+      "keys": "blue"
+    }
+  },
+  "modules": [
+    { "type": "custom", "format": " " },
+    { "type": "custom", "format": " " },
+    "title",
+    "break",
+    {
+      "type": "custom",
+      "format": "┌──────────────────────────────────────────┐",
+      "outputColor": "90"
+    },
+    {
+      "type": "os",
+      "key": "  "
+    },
+    {
+      "type": "cpu",
+      "key": "  "
+    },
+    {
+      "type": "shell",
+      "key": "  "
+    },
+    {
+      "type": "display",
+      "key": "  "
+    },
+    {
+      "type": "memory",
+      "key": "  "
+    },
+    {
+      "type": "terminal",
+      "key": "  "
+    },
+    {
+      "type": "uptime",
+      "key": " 󰔚 "
+    },
+    {
+      "type": "packages",
+      "key": "  "
+    },
+    {
+      "type": "custom",
+      "format": "└──────────────────────────────────────────┘",
+      "outputColor": "90"
+    },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "circle",
+      "paddingLeft": 3
+    }
+  ]
+}

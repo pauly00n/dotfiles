@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# --- credentials / live auth (exist on disk, never tracked) ---
+.config/gcloud/
+.config/gh/
+.config/gws/
+.config/menus/
+.config/raycast-x
+
+# generic secret patterns (belt-and-suspenders)
+**/*.local
+**/*credentials*
+**/*secret*
+**/*token*
+**/*.key
+**/*.pem
