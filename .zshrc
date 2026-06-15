@@ -47,7 +47,8 @@ alias cn="cd ~/.config/nvim/lua"
 alias cz="nvim ~/.zshrc"
 alias n="nvim"
 alias cb="cd ../"
-alias claud="claude --dangerously-skip-permissions"
+alias clauded="claude --dangerously-skip-permissions"
+alias claudef="claude --dangerously-skip-permissions --system-prompt-file ~/.claude/CLAUDE-FABLE-PROMPT.md"
 alias g="git"
 
 # zoxide

@@ -2,7 +2,7 @@
 
 personalized dotfiles for my laptop setup. 
 - **/bin/**: collection of bash scripts. available everywhere.
-- **/claude/**: my CLAUDE.md and custom statusline shown here:
+- **/claude/**: my CLAUDE.md, custom statusline, and experimental system prompt [here](https://github.com/elder-plinius/CL4R1T4S/blob/main/ANTHROPIC/CLAUDE-FABLE-5.md)
 ![development](./images/Development.png)
 - **/fastfetch/**: run `fastfetch` in terminal to get this:
 ![fastfetch](./images/Fastfetch.png)
